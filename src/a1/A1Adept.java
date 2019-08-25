@@ -66,7 +66,7 @@ public class A1Adept {
 		
 		System.out.println("Biggest: " + maxAmtName + " ("+String.format("%.2f", maxAmt)+")");
 		
-		System.out.println("Smallest: " + minAmtName + "(" + String.format("%.2f", minAmt) + ")");
+		System.out.println("Smallest: " + minAmtName + " (" + String.format("%.2f", minAmt) + ")");
 		
 		avgAmt /= numCustomers;
 		
