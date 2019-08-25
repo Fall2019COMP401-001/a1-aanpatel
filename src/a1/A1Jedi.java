@@ -37,14 +37,18 @@ public class A1Jedi {
 			 fname = scan.next();
 			 lname = scan.next();
 			 int itemCount = scan.nextInt();
-			 
+			 int[] countedItem = new int[numItems];
 			 //Take the items and their quantities bought by the customer. Also update the purchaseList and buyerCountList accordingly
 			 for(int j = 0; j < itemCount; j++) {
 				 int qty = scan.nextInt();
 				 String nameOfItem = scan.next();
 				 if(qty>0) {
-					 purchaseList[getItemIndex(itemNameList, nameOfItem)] += qty;
-					 buyerCountList[getItemIndex(itemNameList, nameOfItem)] += 1;
+					 int index = getItemIndex(itemNameList, nameOfItem);
+					 purchaseList[index] += qty;
+					 if(countedItem[index] == 0) {
+						 countedItem[index] = 1;
+						 buyerCountList[getItemIndex(itemNameList, nameOfItem)] += 1;
+					 }
 				 }
 			 }
 		}
